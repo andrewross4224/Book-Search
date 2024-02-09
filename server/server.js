@@ -21,7 +21,7 @@ const startServer = async () => {
   app.use(express.json());
 
   app.use('/graphql', expressMiddleware(server, {
-    // context: authMiddleware
+    context: authMiddleware
   }));
 
   if (process.env.NODE_ENV === 'production') {
@@ -30,7 +30,6 @@ const startServer = async () => {
 
   db.once('open', () => {
     app.listen(PORT, () => {
-      console.log('graphQL endpoint http://localhost:3001/graphql')
       console.log(`🌍 Now listening on localhost:${PORT}`)}
       );
   });
