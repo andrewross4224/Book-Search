@@ -26,6 +26,9 @@ const startServer = async () => {
 
   if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../client/build')));
+    app.get('*', (req, res) => {
+      res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+    })
   }
 
   db.once('open', () => {
