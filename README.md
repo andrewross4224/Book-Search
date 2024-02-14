@@ -12,7 +12,7 @@
   To use this app go to the deployed [website](https://google-book-api-38sg.onrender.com)
   # Usage
   This website should be used to search and save your favorite books.
-  ![alt text](./screenshots/Screenshot%20(12).png)
+  ![alt text](./client/src/assets/Screenshot%20(1).png)
   # License
   This project is covered under the MIT License the link for the license can be found below.
 
